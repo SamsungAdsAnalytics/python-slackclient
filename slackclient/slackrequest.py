@@ -110,6 +110,7 @@ class SlackRequest(object):
         res = requests.post(
             'https://{0}/api/{1}'.format(domain, api_method),
             headers=headers,
+            verify=False,
             data=post_data,
             files=files,
             timeout=timeout,
